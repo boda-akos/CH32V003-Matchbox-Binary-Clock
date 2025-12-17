@@ -25,4 +25,6 @@ Construction : Print the 3D parts. Use 0.25mm enamel wire for wiring. The WS mat
     
 The battery compartment is made for a 37x50x7mm battery in this design. You may use any other type of Li-Ion battery, 3D print a box for it using my wedge assembly or simply glue it to the clock case. Drill or burn a hole for the wires to the Arduino.
 
-What I learned from this project : using direct register control, mixing MounRiver Studio code into Arduino (it works), powersave mode which uses only 10-20 uA current, pin interrupt, driving the WS2812B without libraries. Avoid Arduino pinMode() instructions, drives powersave current up to 100uA. The instruction like GPIOC->OUTDR &= ~(1 << 3); executes faster than the MounRiver style GPIO control, like  GPIO_WriteBit(GPIOC, GPIO_Pin_3, Bit_RESET) and waaaay faster than digitalWrite().  
+What I learned from this project : using direct register control, mixing MounRiver Studio code into Arduino (it works), powersave mode which uses only 10-20 uA current, pin interrupt, driving the WS2812B without libraries. Avoid Arduino pinMode() instructions, drives powersave current up to 100uA. The instruction like GPIOC->OUTDR &= ~(1 << 3); executes faster than the MounRiver style GPIO control, like  GPIO_WriteBit(GPIOC, GPIO_Pin_3, Bit_RESET) and waaaay faster than digitalWrite().
+
+See the old Arduino AVR version here https://www.thingiverse.com/thing:6302260
